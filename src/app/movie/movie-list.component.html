@@ -1,0 +1,25 @@
+<!-- Interpolation (One-Way Binding) -->
+<!-- <div>{{message}}</div>
+<div>{{2 + 2 * 2}}</div>
+<div>{{getSqrt(4)}}</div> -->
+
+<!-- Pipes (currecy, percent, upercase...) -->
+<!-- <div>{{message | uppercase}}</div>
+<div>{{message | lowercase}}</div>
+<div>{{44 | percent}}</div>
+<div>{{1200 | currency}}</div>
+<div>{{date | date:'shortTime'}}</div> -->
+
+<h2>Movie List</h2>
+
+<div *ngIf="!movies" class="loading">
+    <img  src="https://cdn.dribbble.com/users/2973561/screenshots/5757826/loading__.gif" alt="Loading">
+</div>
+
+<p *ngIf="movies?.length === 0">There is no movies yet!</p>
+
+<div *ngFor="let movie of movies" class="movie-block">
+    <div><span>Title: </span>{{movie.title}}</div>
+    <div><span>Year: </span>{{movie.year}}</div>
+    <div><span>Rating: </span>{{movie.rating}}</div>
+</div>
