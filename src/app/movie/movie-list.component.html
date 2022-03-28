@@ -12,13 +12,22 @@
 
 <h2>Movie List</h2>
 
+<!-- Structural Directives - effect the DOM (ngIf, ngFor, ngSwitch)  -->
 <div *ngIf="!movies" class="loading">
     <img  src="https://cdn.dribbble.com/users/2973561/screenshots/5757826/loading__.gif" alt="Loading">
 </div>
 
 <p *ngIf="movies?.length === 0">There is no movies yet!</p>
 
-<div *ngFor="let movie of movies" class="movie-block">
+<!-- Attribute Directives - effect the attribute values (ngClass, ngStyle, ngModel)  -->
+<!-- Event Binding: (event_name)="handler(parameters)"  -->
+
+<!-- [class.great-movie]="movie.rating >= 9" -->
+<div *ngFor="let movie of movies; let i = index;"
+        class="movie-block" 
+        [ngClass]="{'great-movie': movie.rating >= 9}"
+        (click)="removeMovie(i)"> 
+    <div><span>Index: </span>{{i}}</div> 
     <div><span>Title: </span>{{movie.title}}</div>
     <div><span>Year: </span>{{movie.year}}</div>
     <div><span>Rating: </span>{{movie.rating}}</div>
