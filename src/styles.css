@@ -6,3 +6,21 @@ body {
 h1, h2 {
     text-align: center;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background-color: #c3cad5;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #c3cad5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgb(151, 146, 146);
+}

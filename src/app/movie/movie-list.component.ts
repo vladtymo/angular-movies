@@ -18,7 +18,7 @@ export class MovieComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    //setTimeout(() => this.movies = movieList, 1000);
+    setTimeout(() => this.movies = movieList, 1000);
   }
 
   getSqrt(num: number): number {

@@ -26,7 +26,8 @@
 <div *ngFor="let movie of movies; let i = index;"
         class="movie-block" 
         [ngClass]="{'great-movie': movie.rating >= 9}"
-        (click)="removeMovie(i)"> 
+        (click)="removeMovie(i)"
+        > 
     <div><span>Index: </span>{{i}}</div> 
     <div><span>Title: </span>{{movie.title}}</div>
     <div><span>Year: </span>{{movie.year}}</div>
