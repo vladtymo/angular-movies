@@ -4,3 +4,7 @@ header {
     z-index: 100;
     border-bottom: 1px solid white;
 }
+
+.nav a {
+    vertical-align:top;
+}
