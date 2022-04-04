@@ -11,36 +11,24 @@ import { Genre } from '../genre';
 export class EditGenreComponent implements OnInit {
 
   genre: Genre;
-  form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,
-              private activatedRoute: ActivatedRoute,
+  constructor(private activatedRoute: ActivatedRoute,
               private router: Router) {
    }
 
   ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      name: ['', Validators.required]
-    });
-
     this.activatedRoute.params.subscribe(params => {
       console.log(params.id);
       // get genre by id
       this.genre = {id: 1, name: "Test Genre"};
-
-      this.form.patchValue(this.genre);
     });
 
   }
 
-  submit(): void {
-
-    if(this.form.controls["name"].errors)
-      alert("Invalid data!");
-    else
-      alert(this.form.controls["name"].value);
+  submit(genre: Genre): void {
 
     // Saving data... (request to edit genre)
+    alert("Edited");
     this.router.navigate(["/genres/"]);
   }
 }

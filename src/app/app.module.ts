@@ -12,6 +12,7 @@ import { GenreListComponent } from './genres/genre-list/genre-list.component';
 import { AddGenreComponent } from './genres/add-genre/add-genre.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
+import { GenreFormComponent } from './genres/genre-form/genre-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
     HomeComponent,
     GenreListComponent,
     AddGenreComponent,
-    EditGenreComponent
+    EditGenreComponent,
+    GenreFormComponent
   ],
   imports: [
     BrowserModule,

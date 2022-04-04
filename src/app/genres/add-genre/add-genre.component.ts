@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Genre } from '../genre';
 
 @Component({
   selector: 'app-add-genre',
@@ -8,26 +9,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AddGenreComponent implements OnInit {
 
-  //fb: FormBuilder;
-  form: FormGroup;
-
-  constructor(private formBuilder: FormBuilder) {
-    //this.fb = formBuilder;
+  constructor() {
    }
 
   ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      name: ['', Validators.required]
-    });
   }
 
-  submit(): void {
+  submit(genre: Genre): void {
 
-    if(this.form.controls["name"].errors)
-      alert("Invalid data!");
-    else
-      alert(this.form.controls["name"].value);
-
+    alert("Created");
     // Saving data... (request to create a new genre)
   }
 }

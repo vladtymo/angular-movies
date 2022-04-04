@@ -1,12 +1,6 @@
 <h2>Create New Genre</h2>
-
-<form (submit)="submit()" [formGroup]="form">
-    <div>
-        <mat-form-field appearance="fill">
-            <mat-label>Name:</mat-label>
-            <input formControlName="name" matInput>
-        </mat-form-field>
-    </div>
-    <button [disabled]="!form.valid" mat-raised-button type="submit" color="accent">Create</button>
-    <a routerLink="/genres" mat-raised-button>Back</a>
-</form> 
+<app-genre-form (onSave)="submit($event)">
+    <ng-container buttonContent>
+        Create
+    </ng-container>
+</app-genre-form>
