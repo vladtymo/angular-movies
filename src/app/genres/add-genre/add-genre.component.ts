@@ -17,7 +17,7 @@ export class AddGenreComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      name: ['', Validators.compose([Validators.required, Validators.email])]
+      name: ['', Validators.required]
     });
   }
 
@@ -28,6 +28,6 @@ export class AddGenreComponent implements OnInit {
     else
       alert(this.form.controls["name"].value);
 
-    // Saving data...
+    // Saving data... (request to create a new genre)
   }
 }
