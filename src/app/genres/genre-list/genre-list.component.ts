@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Genre } from 'src/app/genre';
-import { genreList } from 'src/app/genre-list';
+import { Genre } from 'src/app/genres/genre';
+import { genreList } from 'src/app/genres/genre-list';
 
 @Component({
   selector: 'app-genre-list',

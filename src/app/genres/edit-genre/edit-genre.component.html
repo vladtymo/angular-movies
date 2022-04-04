@@ -1,4 +1,4 @@
-<h2>Create New Genre</h2>
+<h2>Edit Genre</h2>
 
 <form (submit)="submit()" [formGroup]="form">
     <div>
@@ -7,6 +7,6 @@
             <input formControlName="name" matInput>
         </mat-form-field>
     </div>
-    <button [disabled]="!form.valid" mat-raised-button type="submit" color="accent">Create</button>
+    <button [disabled]="!form.valid" mat-raised-button type="submit" color="accent">Edit</button>
     <a routerLink="/genres" mat-raised-button>Back</a>
 </form> 

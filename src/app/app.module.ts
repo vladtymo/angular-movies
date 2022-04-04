@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { GenreListComponent } from './genres/genre-list/genre-list.component';
 import { AddGenreComponent } from './genres/add-genre/add-genre.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     HomeComponent,
     GenreListComponent,
-    AddGenreComponent
+    AddGenreComponent,
+    EditGenreComponent
   ],
   imports: [
     BrowserModule,

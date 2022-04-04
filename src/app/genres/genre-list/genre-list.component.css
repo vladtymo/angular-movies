@@ -2,6 +2,10 @@
     background-color: rgb(159, 234, 255);
     margin-bottom: 10px;
     box-shadow: 5px 5px 5px gray;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .genre-card:hover {
     background-color: rgb(126, 185, 201);
