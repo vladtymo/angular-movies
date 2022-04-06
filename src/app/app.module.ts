@@ -13,6 +13,7 @@ import { AddGenreComponent } from './genres/add-genre/add-genre.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
 import { GenreFormComponent } from './genres/genre-form/genre-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { GenreFormComponent } from './genres/genre-form/genre-form.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

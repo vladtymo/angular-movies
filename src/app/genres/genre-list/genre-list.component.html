@@ -10,8 +10,8 @@
 
 <p *ngIf="genres?.length === 0">There is no genres yet!</p>
 
-<div class="genre-list" *ngFor="let genre of genres">
-    <mat-card class="genre-card">
+<div class="genre-list">
+    <mat-card *ngFor="let genre of genres" class="genre-card">
         <span>{{genre.name}}</span>
         <button [routerLink]="['/genres/edit/', genre.id]" mat-stroked-button>Edit</button>
     </mat-card>

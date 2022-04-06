@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Genre } from '../genre';
+import { GenresService } from '../genres.service';
 
 @Component({
   selector: 'app-add-genre',
@@ -9,15 +11,21 @@ import { Genre } from '../genre';
 })
 export class AddGenreComponent implements OnInit {
 
-  constructor() {
-   }
+  constructor(private genreService: GenresService, 
+              private router: Router) {}
 
   ngOnInit(): void {
   }
 
   submit(genre: Genre): void {
 
-    alert("Created");
     // Saving data... (request to create a new genre)
+    this.genreService.create(genre).subscribe(result => {
+      alert("Created!");
+      this.router.navigate(["genres"]);
+    }, error => {
+      alert("Error!");
+      console.log(error);
+    });
   }
 }
