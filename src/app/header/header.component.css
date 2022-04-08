@@ -5,6 +5,6 @@ header {
     border-bottom: 1px solid white;
 }
 
-.nav a {
-    vertical-align:top;
+.spacer {
+    flex: 1 1 auto;
 }

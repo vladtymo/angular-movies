@@ -14,6 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
 import { GenreFormComponent } from './genres/genre-form/genre-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './account/login/login.component';
+import { AuthViewComponent } from './account/auth-view/auth-view.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     GenreListComponent,
     AddGenreComponent,
     EditGenreComponent,
-    GenreFormComponent
+    GenreFormComponent,
+    LoginComponent,
+    AuthViewComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,15 @@
 <h2>Genre List</h2>
 
-<div class="example-button-row">
-    <button routerLink="/genres/add" mat-raised-button color="accent">Add New</button>
-  </div>
+<app-auth-view>
+    <ng-container authenticated>
+        <div class="example-button-row">
+            <button routerLink="/genres/add" mat-raised-button color="accent">Add New</button>
+        </div>
+    </ng-container>
+    <!-- <ng-container notAuthenticated>
+        I am not authenticated!
+    </ng-container> -->
+</app-auth-view>
 
 <div *ngIf="!genres" class="loading">
     <img  src="https://cdn.dribbble.com/users/2973561/screenshots/5757826/loading__.gif" alt="Loading">
