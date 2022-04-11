@@ -33,6 +33,9 @@ export class AccountService {
   saveToken(token: string) {
     localStorage.setItem(this.tokenKey, token);
   }
+  getToken() {
+    return localStorage.getItem(this.tokenKey);
+  }
 
   register() {}
 

@@ -13,9 +13,10 @@ import { AddGenreComponent } from './genres/add-genre/add-genre.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
 import { GenreFormComponent } from './genres/genre-form/genre-form.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginComponent } from './account/login/login.component';
 import { AuthViewComponent } from './account/auth-view/auth-view.component';
+import { JwtInterceptorService } from './account/jwt-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,11 @@ import { AuthViewComponent } from './account/auth-view/auth-view.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: JwtInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

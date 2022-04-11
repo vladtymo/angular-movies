@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { IsAuthGuard } from './account/is-auth.guard';
 import { LoginComponent } from './account/login/login.component';
 import { AddGenreComponent } from './genres/add-genre/add-genre.component';
 import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
@@ -12,7 +13,7 @@ const routes: Routes = [
   {path: 'movies', component: MovieComponent},
 
   {path: 'genres', component: GenreListComponent},
-  {path: 'genres/add', component: AddGenreComponent},
+  {path: 'genres/add', component: AddGenreComponent, canActivate: [IsAuthGuard]},
   {path: 'genres/edit/:id', component: EditGenreComponent},
 
   {path: 'account/login', component: LoginComponent},

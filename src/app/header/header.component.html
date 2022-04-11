@@ -16,10 +16,20 @@
 
             <span class="spacer"></span>
 
-            <a routerLink="/account/login" mat-button>
-                <mat-icon class="menu-icon" aria-hidden="false" aria-label="Example home icon">login</mat-icon>
-                Login
-            </a>
+            <app-auth-view>
+                <ng-container authenticated>
+                    <a (click)="logout()" mat-button>
+                        <mat-icon class="menu-icon" aria-hidden="false" aria-label="Example home icon">logout</mat-icon>
+                        Logout
+                    </a>
+                </ng-container>
+                <ng-container notAuthenticated>
+                    <a routerLink="/account/login" mat-button>
+                        <mat-icon class="menu-icon" aria-hidden="false" aria-label="Example home icon">login</mat-icon>
+                        Login
+                    </a>
+                </ng-container>
+            </app-auth-view>
         </mat-toolbar-row>
     </mat-toolbar>
 </header>

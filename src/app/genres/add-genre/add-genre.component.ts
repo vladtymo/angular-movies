@@ -20,6 +20,7 @@ export class AddGenreComponent implements OnInit {
   submit(genre: Genre): void {
 
     // Saving data... (request to create a new genre)
+    
     this.genreService.create(genre).subscribe(result => {
       alert("Created!");
       this.router.navigate(["genres"]);
